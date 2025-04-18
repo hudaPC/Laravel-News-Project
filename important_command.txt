@@ -1,0 +1,6 @@
+To open Terminal:
+Hold SHIFT+CTRL then click on tilt key (~).
+To run laravel project:
+ type in terminal: php artisan serve press enter
+
+ Create a Controllers command: php artisan make:controller NewsPostController
