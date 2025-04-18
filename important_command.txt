@@ -1,6 +1,11 @@
 To open Terminal:
 Hold SHIFT+CTRL then click on tilt key (~).
+
+To clear terminal:
+cls  => press enter
+
 To run laravel project:
- type in terminal: php artisan serve press enter
+ type in terminal: php artisan serve 
 
  Create a Controllers command: php artisan make:controller NewsPostController
+Create a Controllers command: php artisan make:controller MainPostController
