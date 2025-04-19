@@ -12,13 +12,13 @@ class MainController extends Controller
 
     }
     public function about_us(){
-        //
-        return ("This is about us from main controller");
+      return view('others.about-us');
+        //return ("This is about us from main controller");
 
     }
     public function contact_us(){
-        //
-        return ("This is contact us from main controller");
+        return view('others.contact-us');
+       // return ("This is contact us from main controller");
 
     }
 }
