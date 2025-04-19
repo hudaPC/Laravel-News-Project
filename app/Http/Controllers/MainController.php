@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     public function index(){
-        // logic....
-        return view('home');
+        $name='Bodrul Huda';
+        return view('home',[
+            'name' => $name
+        ]);
 
     }
     public function about_us(){
