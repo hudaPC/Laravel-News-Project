@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     public function index(){
+        return view('index');
         $name='Bodrul Huda';
         $sex = 'Male';
         $dob = '01/03/1967';
