@@ -8,8 +8,21 @@ class MainController extends Controller
 {
     public function index(){
         $name='Bodrul Huda';
+        $sex = 'Male';
+        $dob = '01/03/1967';
+        $colors = [
+            'Black',
+            'White',
+            'Green',
+            'Yellow',
+            'Blue',
+            'Pink',
+        ];
         return view('home',[
-            'name' => $name
+            'name' => $name,
+            'sex' => $sex,
+            'dob' => $dob,
+            'colors' => $colors
         ]);
 
     }
