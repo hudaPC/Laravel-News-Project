@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    {{-- <p> {{ url('about-us') }}</p> --}}
-    <p> {{ Route('about') }}</p>
-    <h1>HOME PAGE</h1>
-    <P><a href="#">ABOUT US</a></P>
-    <P><a href="#">CONTACT US</a></P>
-    
-</body>
-</html>
+@extends('layouts.main')
+@section('title')
+    HOME PAGE
+@endsection
+
+@section('content')
+   <h4>Home content</h4> 
+   {{-- Include an external blade --}}
+   @for ($i = 0; $i <10; $i++)
+    @include('components.product-ui')
+   @endfor
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consectetur ea voluptas possimus, voluptate mollitia. Similique, nam. Voluptatem nihil iste voluptatum sint nisi, soluta commodi esse natus veritatis. Atque, dolorem!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores beatae vitae magnam, modi at atque expedita repellendus. Deserunt fugiat provident asperiores, voluptas, quam nesciunt fugit reiciendis harum, aperiam ad deleniti.</p>
+@endsection
