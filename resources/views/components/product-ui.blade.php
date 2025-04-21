@@ -1,1 +1,3 @@
-<p style="border:2px solid red">Product UI page</p>
+<p style="border:2px solid red">
+   <b>{{$id}}</b>. Product UI page 
+</p>

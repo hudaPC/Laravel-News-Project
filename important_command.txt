@@ -7,5 +7,5 @@ cls  => press enter
 To run laravel project:
  type in terminal: php artisan serve 
 
- Create a Controllers command: php artisan make:controller NewsPostController
 Create a Controllers command: php artisan make:controller MainPostController
+migrate database command: php artisan migrate
