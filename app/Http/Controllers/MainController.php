@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     public function index(){
-        return view('index');
+       return view('index');
         $name='Bodrul Huda';
         $sex = 'Male';
         $dob = '01/03/1967';
@@ -28,9 +28,7 @@ class MainController extends Controller
 
     }
     public function about_us(){
-      //return view('others.about-us'); also ok
-      return view('others.about-us');
- 
+      return view('others.about-us'); 
     }
     public function contact_us(){
         return view('others.contact-us');
