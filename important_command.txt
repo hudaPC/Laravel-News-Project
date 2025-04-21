@@ -27,6 +27,9 @@ create model: php artisan make:model Flight
  tips: First letter capital letter and every first word first letter also capital letter eg. NewsCategory.(camel case)
 
 php artisan make:model NewsCategory
+PS E:\latavel_projects\eblog> php artisan make:model NewsCategory => press enter.
+   INFO  Model [E:\latavel_projects\eblog\app\Models\NewsCategory.php] created successfully. 
+
 php artisan make:model NewsPost
 
 

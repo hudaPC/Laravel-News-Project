@@ -35,4 +35,9 @@ class MainController extends Controller
        // return ("This is contact us from main controller");
 
     }
+    public function model_saving(){
+       // return view('others.model_saving');
+       die('Time to save the model.......');
+
+    }
 }

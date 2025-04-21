@@ -14,6 +14,9 @@
     <P><a href="{{ Route('home') }}">HOME</a></P>
     <P><a href="{{ Route('about') }}">ABOUT US</a></P>
     <P><a href="{{ Route('contact') }}">CONTACT US</a></P>
+    <head><u> MODEL</u></head>
+    <P><a href="{{ Route('model-saving') }}">SAVING</a></P>
+   
     <hr>
     @yield('content')
 
