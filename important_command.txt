@@ -18,14 +18,32 @@ TIPS LARAVEL TABLES
 
 TABLE creation command: php artisan make:migration create_tablename_table
 
-- news_categories
-----name
-----photo
-----details
-
-
-
-- news_Posts
-- comments
 
 php artisan make:migration create_news_categories_table
+TABLE 1- news_categories
+    ---- name
+    ---- photo
+    ---- details
+php artisan make:migration create_news_posts_table
+TABLE 2- news_Posts
+ ---- title
+ ---- body
+ ---- photo
+ ---- views
+ ---- user_id
+ ---- news_category_id
+
+
+TABLE 3- comments
+php artisan make:migration create_comments_table
+--- user_id
+--- news_post_id
+--- body
+
+
+
+TABLE MIGRATING command
+php artisan migrate
+
+*****drops all tables, re-runs all migrations 
+php artisan migrate:refresh

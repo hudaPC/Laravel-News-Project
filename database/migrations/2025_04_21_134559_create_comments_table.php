@@ -11,30 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('news_categories', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->string('name',255);
-            $table->text('photo')->nullable();
-            $table->longText('details')->nullable();
             $table->timestamps();
+            $table->integer('user_id');
+            $table->integer('news_post_id');
+            $table->longText('body');
         });
     }
-
-/*
-string-> varchar 45
-varchar()
-text()
-
-*/ 
-
-
-
+    
+   
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('news_categories');
+        Schema::dropIfExists('comments');
     }
 };
