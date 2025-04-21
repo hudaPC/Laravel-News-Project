@@ -9,3 +9,23 @@ To run laravel project:
 
 Create a Controllers command: php artisan make:controller MainPostController
 migrate database command: php artisan migrate
+
+
+TIPS LARAVEL TABLES
+=> make sure table names are always plural
+=> use lowercase
+=> use snake case eg. News Category => news_categories
+
+TABLE creation command: php artisan make:migration create_tablename_table
+
+- news_categories
+----name
+----photo
+----details
+
+
+
+- news_Posts
+- comments
+
+php artisan make:migration create_news_categories_table
