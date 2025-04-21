@@ -7,11 +7,32 @@ cls  => press enter
 To run laravel project:
  type in terminal: php artisan serve 
 
+ALL COMMANDS
+=================
 Create a Controllers command: php artisan make:controller MainPostController
 migrate database command: php artisan migrate
 
+**Create table 
+==================
+create table command: php artisan make:migration create_news_posts_table
+*** TABLE MIGRATING command
+php artisan migrate
+
+***** Drops all tables, re-runs all migrations 
+php artisan migrate:refresh
+
+****model
+===========
+create model: php artisan make:model Flight
+ tips: First letter capital letter and every first word first letter also capital letter eg. NewsCategory.(camel case)
+
+php artisan make:model NewsCategory
+php artisan make:model NewsPost
+
+
 
 TIPS LARAVEL TABLES
+********************
 => make sure table names are always plural
 => use lowercase
 => use snake case eg. News Category => news_categories
@@ -40,13 +61,29 @@ php artisan make:migration create_comments_table
 --- news_post_id
 --- body
 
+Note: First create table using above command. It will create table add file to  database>migrate>tablefile with name.
+expand it by clicking it and add all columns then open terminal and run the command
+=> php artisan migrate
 
-
-TABLE MIGRATING command
+*** TABLE MIGRATING command
 php artisan migrate
 
-*****drops all tables, re-runs all migrations 
+***** Drops all tables, re-runs all migrations 
 php artisan migrate:refresh
+
+
+CREATE MODLE TO CONNECT MySql database
+***********************
+models in laravel: https://laravel.com/docs/12.x/eloquent
+
+Location modle:project name>app>modles>user.php // default models
+
+php artisan make:model Flight
+
+
+
+
+
 
 URL: https://www.youtube.com/watch?v=GmqZwozkWG0&list=PLOR5hj0X3WPdcX3j0n2YhmOkh3IQd4bXk&index=7
 T- 00:00
