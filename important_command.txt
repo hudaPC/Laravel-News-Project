@@ -88,5 +88,5 @@ php artisan make:model Flight
 
 
 
-https://www.youtube.com/watch?v=djviWnC7TUM&list=PLOR5hj0X3WPdcX3j0n2YhmOkh3IQd4bXk&index=8
-T- 00:00
+https://www.youtube.com/watch?v=djviWnC7TUM&list=PLOR5hj0X3WPdcX3j0n2YhmOkh3IQd4bXk&index=9
+T- 08:14

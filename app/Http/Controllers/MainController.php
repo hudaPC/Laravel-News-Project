@@ -48,42 +48,83 @@ class MainController extends Controller
 
     }
     public function model_querying(){
-       
+
+      
+        // average 
+        $average= NewsCategory::where([])
+        ->average('id');
+        echo "<h4>AVERAGE</h4>";
+        echo " $average <br>";
+        
+  
+      
+      // agregate sum
+      $sum = NewsCategory::where([])
+      ->sum('id');
+      echo "<h4>SUM</h4>";
+      echo " $sum <br>";
+      
+
+
+      // FINDORFAIL if null it goesr 404 not found page
+      // $cat = NewsCategory::findorfail(10);
+      // echo "<h4>FIND</h4>";
+      // if($cat!=null){
+      //   echo "{$cat->id}. {$cat->name}. {$cat->details}";
+      // }
+       // FIND inside find must be an id
+      $cat = NewsCategory::find(1);
+      echo "<h4>FIND</h4>";
+      if($cat!=null){
+        echo "{$cat->id}. {$cat->name}. {$cat->details}";
+      }
+      
+
+      // LIMIT
+      $cats = NewsCategory::where([])
+      ->limit(2)
+      ->get();
+      echo "<h4>LIMIT</h4>";
+      foreach ($cats  as $key => $cat) {
+        echo "{$cat->id}. {$cat->name}. {$cat->details}<br>";
+      }
 
        // Empty array Order By desc
-       $cats = NewsCategory::where([])->orderBy('id','desc')->get();
+       $cats = NewsCategory::where([])
+       ->orderBy('id','desc')
+       ->get();
        echo "<h4>WHERE all desc</h4>";
        foreach ($cats  as $key => $cat) {
          echo "{$cat->id}. {$cat->name}. {$cat->details}<br>";
        }
 
       // Order By desc
-      $cats = NewsCategory::wherein('id',[1,3,5])->orderBy('id','desc')->get();
+      $cats = NewsCategory::wherein('id',[1,3,5])
+      ->orderBy('id','desc')
+      ->get();
       echo "<h4>WHERE desc</h4>";
       foreach ($cats  as $key => $cat) {
         echo "{$cat->id}. {$cat->name}. {$cat->details}<br>";
       }
 
       // WhereIn condition
-      $cats = NewsCategory::wherein('id',[1,3,5])->get();
+      $cats = NewsCategory::wherein('id',[1,3,5])
+      ->get();
       echo "<h4>WHERE IN</h4>";
       foreach ($cats  as $key => $cat) {
         echo "{$cat->id}. {$cat->name}. {$cat->details}<br>";
       }
 
-
-
-
       // single Where condition
-  $cats = NewsCategory::where('name','Cinema')->get();
+  $cats = NewsCategory::where('name','Cinema')
+  ->get();
     echo "<h4>Single WHERE</h4>";
     foreach ($cats  as $key => $cat) {
       echo "{$cat->id}. {$cat->name}. {$cat->details}<br>";
     }
 
       // OrWhere condition
-       $cats = NewsCategory::where([
-        'name' => 'Cinema',
+       $cats = NewsCategory::where(['name' => 'Cinema',
           ])->OrWhere([
             'id' => '4',
           ])->OrWhere([
