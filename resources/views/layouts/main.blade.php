@@ -11,11 +11,12 @@
     {{-- <p> {{ Route('about') }}</p>
     <p> {{ Route('contact') }}</p> --}}
     <h1>@yield('title')</h1>
-    <P><a href="{{ Route('home') }}">HOME</a></P>
-    <P><a href="{{ Route('about') }}">ABOUT US</a></P>
-    <P><a href="{{ Route('contact') }}">CONTACT US</a></P>
+    <P><a href="{{ route('home') }}">HOME</a></P>
+    <P><a href="{{ route('about') }}">ABOUT US</a></P>
+    <P><a href="{{ route('contact') }}">CONTACT US</a></P>
     <head><u> MODEL</u></head>
-    <P><a href="{{ Route('model-saving') }}">SAVING</a></P>
+    <P><a href="{{ route('model-saving') }}">SAVING</a></P>
+    <P><a href="{{ Route('model-querying') }}">QUERYING</a></P>
    
     <hr>
     @yield('content')

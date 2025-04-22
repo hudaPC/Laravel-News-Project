@@ -39,12 +39,18 @@ class MainController extends Controller
     public function model_saving(){
       // die('Time to save the model.......');
       $m = new NewsCategory();
-      $m->name = 'Politics';
+      $m->name = 'Education';
       $m->photo = 'no_image.jpg';
-      $m->details = 'News details about politics.';
-      $m->save();
+      $m->details = 'Education news details.';
+      //$m->save();
 
       die('Done processing');
+
+    }
+    public function model_querying(){
+    
+
+      die('Done qurrying');
 
     }
 
