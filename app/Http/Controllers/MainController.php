@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NewsCategory;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -36,8 +37,9 @@ class MainController extends Controller
 
     }
     public function model_saving(){
-       // return view('others.model_saving');
-       die('Time to save the model.......');
+      // die('Time to save the model.......');
+      $m = new NewsCategory();
+      die();
 
     }
 }
