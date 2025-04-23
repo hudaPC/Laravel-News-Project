@@ -49,15 +49,20 @@ class MainController extends Controller
     }
     public function model_querying(){
 
+        // need value to displayed before it adding some where
+        $cats = NewsCategory::all();
+          echo "<h4>Append name with three letters</h4>";
+          foreach ($cats as $cat) {
+            echo "{$cat->id}. {$cat->name} ({$cat->short_name})<br>";
+        }
 
 
-
-       // Appends => to add a variable in model
+       // Appends => to add a variable in model to dispaly query data without creating acolumn.
        $cats= NewsCategory::where([])
        ->get();
-       echo "<h4> QUERY NAME LIKE </h4>";
+       echo "<h4> Append name with three letters </h4>";
        foreach ($cats  as $key => $cat) {
-         echo "{$cat->id}. {$cat->short_name}. {$cat->details}<br>";
+         echo "{$cat->id}. {$cat->short_name}<br>";
        }
           // scope like 
           $cats= NewsCategory::where('name', 'like', '%t%')
