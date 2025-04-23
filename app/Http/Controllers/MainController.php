@@ -39,20 +39,46 @@ class MainController extends Controller
     public function model_saving(){
       // die('Time to save the model.......');
       $m = new NewsCategory();
-      $m->name = 'Local News';
+      $m->name = 'Intenational News';
       $m->photo = 'no_image.jpg';
-      $m->details = 'Local News details.';
-      //$m->save();
+      $m->details = 'Intenational News details.';
+     //$m->save();
 
       die('Done processing');
 
     }
     public function model_querying(){
 
-      
+
+
+
+       // Appends => to add a variable in model
+       $cats= NewsCategory::where([])
+       ->get();
+       echo "<h4> QUERY NAME LIKE </h4>";
+       foreach ($cats  as $key => $cat) {
+         echo "{$cat->id}. {$cat->short_name}. {$cat->details}<br>";
+       }
+          // scope like 
+          $cats= NewsCategory::where('name', 'like', '%t%')
+          ->get();
+          echo "<h4> QUERY NAME LIKE </h4>";
+          foreach ($cats  as $key => $cat) {
+            echo "{$cat->id}. {$cat->name}. {$cat->details}<br>";
+          }
+
+          // scope >, < , >=, <= , !=
+          $cats= NewsCategory::where('id', '<=', 1)
+          ->get();
+          echo "<h4> QUERY SCOPE</h4>";
+          foreach ($cats  as $key => $cat) {
+            echo "{$cat->id}. {$cat->name}. {$cat->details}<br>";
+          }
+          
+    
         // average 
         $average= NewsCategory::where([])
-        ->average('id');
+        ->avg('id');
         echo "<h4>AVERAGE</h4>";
         echo " $average <br>";
         
