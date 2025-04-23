@@ -7,8 +7,14 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
+
+  public function model_relationships()
+  {
+    die("Relationships");
+  }
     public function index(){
        return view('index');
+       //logics
         $name='Bodrul Huda';
         $sex = 'Male';
         $dob = '01/03/1967';
@@ -37,11 +43,12 @@ class MainController extends Controller
 
     }
     public function model_saving(){
-      // die('Time to save the model.......');
+     
       $m = new NewsCategory();
-      $m->name = 'Intenational News';
+      //$m->name = strtoupper($m->name); // name will be upper case before adding
+      $m->name = 'Gossip';
       $m->photo = 'no_image.jpg';
-      $m->details = 'Intenational News details.';
+      $m->details = 'Gossip News details.';
      //$m->save();
 
       die('Done processing');
@@ -49,13 +56,14 @@ class MainController extends Controller
     }
     public function model_querying(){
 
-        // need value to displayed before it adding some where
+//Hooks
+
+        // need value to change before it adding some where
         $cats = NewsCategory::all();
           echo "<h4>Append name with three letters</h4>";
           foreach ($cats as $cat) {
             echo "{$cat->id}. {$cat->name} ({$cat->short_name})<br>";
         }
-
 
        // Appends => to add a variable in model to dispaly query data without creating acolumn.
        $cats= NewsCategory::where([])
