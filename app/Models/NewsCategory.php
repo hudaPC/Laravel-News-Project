@@ -13,7 +13,12 @@ class NewsCategory extends Model
 //updated
 //deleting
 //deleted
-
+// Override name attribute (e.g., make uppercase and add dot)
+public function getNameAttribute($name)
+{
+	return strtoupper($name) . ".";
+    
+}
     // Add this so short_name is included in output
     protected $appends = ['short_name'];
 
@@ -23,11 +28,7 @@ class NewsCategory extends Model
         return substr($this->name, 0, 3);
     }
 
-    // Override name attribute (e.g., make uppercase and add dot)
-    public function getNameAttribute($name)
-    {
-        return strtoupper($name) . ".";
-    }
+    
 
 
 	
