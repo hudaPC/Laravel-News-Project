@@ -88,5 +88,6 @@ php artisan make:model Flight
 
 
 
-https://www.youtube.com/watch?v=djviWnC7TUM&list=PLOR5hj0X3WPdcX3j0n2YhmOkh3IQd4bXk&index=9
-T- 17:14
+https://www.youtube.com/watch?v=DTTCSj7UMYw&list=PLOR5hj0X3WPdcX3j0n2YhmOkh3IQd4bXk&index=9
+Laravel Model Relationships:
+T- 00:04
